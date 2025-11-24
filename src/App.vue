@@ -10,6 +10,9 @@
                   <li v-if="this.authenticated">
                       <router-link :to="{name: 'BookList'}">Books</router-link>
                   </li>
+                  <li v-if="this.authenticated">
+                      <router-link :to="{name: 'MyLoans'}">My Loans</router-link>
+                  </li>
                   <li v-else @click="login">
                       <router-link :to="{name: 'Auth'}">Log in</router-link>
                   </li>
@@ -32,6 +35,10 @@
           <li class="nav-item" v-if="this.authenticated">
               |
               <router-link :to="{name: 'BookList'}">Books</router-link>
+          </li>
+          <li class="nav-item" v-if="this.authenticated">
+              |
+              <router-link :to="{name: 'MyLoans'}">My Loans</router-link>
           </li>
           <li class="nav-item" v-if="!this.authenticated" @click="login">
               |
