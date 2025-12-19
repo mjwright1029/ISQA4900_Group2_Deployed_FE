@@ -40,6 +40,7 @@
               |
               <router-link :to="{name: 'MyLoans'}">My Loans</router-link>
           </li>
+          
           <li class="nav-item" v-if="!this.authenticated" @click="login">
               |
               <router-link :to="{name: 'Auth'}">Log in</router-link>
